@@ -1,0 +1,135 @@
+[{	
+  "customer_id": "1",	
+  "baseType": "string",
+  "schemaLocation": "string",
+  "type": "string",
+  "name": "GOWTHAM",
+  "status": "GOOD GUY",
+  "statusReason": "Very Good TEST",
+  "validFor": {
+    "endDateTime": "2020-12-08T09:47:08.802Z",
+    "startDateTime": "2020-12-08T09:47:08.802Z"
+  },"accountRef": [
+    {
+      "account_id": "1",
+      "description": "string",
+      "href": "string",
+      "name": "GOWTHAM1"
+    }
+  ],
+  "paymentMethodRef": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "paymentMethod_id": "1",
+      "name": "DEBIT"
+    }
+  ],
+  "contactMedium": [
+    {
+      "baseType": "string",
+      "schemaLocation": "string",
+      "preferred": true,
+      "type": "string",
+      "validFor": {
+        "endDateTime": "2020-12-08T09:47:08.802Z",
+        "startDateTime": "2020-12-08T09:47:08.802Z"
+      },
+      "mediumCharacteristic": {
+        "city": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "type": "string"
+      }
+   }
+  ],
+  "characteristic": [
+    {
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "relatedParty_id": "string",
+      "name": "string",
+      "role": "string"
+    }
+  ]
+},
+ {	
+  "customer_id": "2",	
+  "baseType": "string",
+  "schemaLocation": "string",
+  "type": "string",
+  "name": "KIRAN",
+  "status": "GOOD GUY",
+  "statusReason": "Very Good TEST",
+  "validFor": {
+    "endDateTime": "2020-12-08T09:47:08.802Z",
+    "startDateTime": "2020-12-08T09:47:08.802Z"
+  },"accountRef": [
+    {
+      "account_id": "2",
+      "description": "string",
+      "href": "string",
+      "name": "KIRAN2"
+    }
+  ],
+  "paymentMethodRef": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "paymentMethod_id": "2",
+      "name": "CASH"
+    }
+  ],
+  "contactMedium": [
+    {
+      "baseType": "string",
+      "schemaLocation": "string",
+      "preferred": true,
+      "type": "string",
+      "validFor": {
+        "endDateTime": "2020-12-08T09:47:08.802Z",
+        "startDateTime": "2020-12-08T09:47:08.802Z"
+      },
+      "mediumCharacteristic":  {
+        "city": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "type": "string"
+      }
+    }
+  ],
+  "characteristic": [
+    {
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "relatedParty_id": "string",
+      "name": "string",
+      "role": "string"
+    }
+  ]
+}
+]

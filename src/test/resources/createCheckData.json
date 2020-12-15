@@ -1,0 +1,98 @@
+{	
+  "customer_id": "3",	
+  "baseType": "string",
+  "schemaLocation": "string",
+  "type": "string",
+  "name": "PANKAJ",
+  "status": "GOOD GUY",
+  "statusReason": "Very Good TEST",
+  "validFor": {
+    "endDateTime": [		
+    						2020,
+							12,
+						    8,
+							9,
+							47,
+							8,
+							802000000
+    ],
+    "startDateTime": [		
+    						2020,
+							12,
+						    8,
+							9,
+							47,
+							8,
+							802000000
+    ]
+  },"accountRef": [
+    {
+      "account_id": "3",
+      "description": "string",
+      "href": "string",
+      "name": "PANKAJ3"
+    }
+  ],
+  "paymentMethodRef": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "paymentMethod_id": "3",
+      "name": "CREDIT"
+    }
+  ],
+  "contactMedium": [
+    {
+      "baseType": "string",
+      "schemaLocation": "string",
+      "preferred": true,
+      "type": "string",
+      "validFor": {
+        "endDateTime": [		
+    						2020,
+							12,
+						    8,
+							9,
+							47,
+							8,
+							802000000
+    ],
+        "startDateTime": [		
+    						2020,
+							12,
+						    8,
+							9,
+							47,
+							8,
+							802000000
+    ]},
+      "mediumCharacteristic": {
+        "city": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "type": "string"
+      }
+    }
+  ],
+  "characteristic": [
+    {
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "referredType": "string",
+      "href": "string",
+      "relatedParty_id": "string",
+      "name": "string",
+      "role": "string"
+    }
+  ]
+}

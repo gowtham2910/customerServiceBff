@@ -1,0 +1,746 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.pccw.grpc.services;
+
+
+// The request message for listProductSpecification
+message ListProductSpecificationRequest
+{
+}
+
+// message definition of TimePeriod
+message TIMEPERIOD {
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message ENDDATETIME {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    ENDDATETIME endDateTime = 1;
+
+    message STARTDATETIME {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    STARTDATETIME startDateTime = 2;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+// message definition of PRODUCTSPECCHARACTERISTICVALUE
+message PRODUCTSPECIFICATIONCHARACTERISTICVALUE {
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message ISDEFAULT {
+      string type = 1;
+      string description = 2;
+    }
+
+    ISDEFAULT isDefault = 1;
+
+    message RANGEINTERVAL {
+      string type = 1;
+      string description = 2;
+    }
+
+    RANGEINTERVAL rangeInterval = 2;
+
+    message REGEX {
+      string type = 1;
+      string description = 2;
+    }
+
+    REGEX regex = 3;
+
+    message UNITOFMEASURE {
+      string type = 1;
+      string description = 2;
+    }
+
+    UNITOFMEASURE unitOfMeasure = 4;
+
+    message VALUEFROM {
+      string type = 1;
+      string description = 2;
+    }
+
+    VALUEFROM valueFrom = 5;
+
+    message VALUETO {
+      string type = 1;
+      string description = 2;
+    }
+
+    VALUETO valueTo = 6;
+
+    message VALUETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    VALUETYPE valueType = 7;
+
+    message VALIDFOR {
+      TIMEPERIOD timePeriod = 1;
+      string description = 2;
+    }
+
+    VALIDFOR validFor = 8;
+
+    message VALUE {
+      string value = 1;
+      string description = 2;
+    }
+
+    VALUE value = 9;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType =10;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 11;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 12;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+// message definition of PRODUCTSPECCHARRELATIONSHIP
+message PRODUCTSPECIFICATIONCHARACTERISTICRELATIONSHIPS {
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message ID {
+      string type = 1;
+      string description = 2;
+    }
+
+    ID id = 1;
+
+    message HREF {
+      string type = 1;
+      string description = 2;
+    }
+
+    HREF href = 2;
+
+    message CHARSPECSEQ {
+      string type = 1;
+      string description = 2;
+    }
+
+    CHARSPECSEQ charSpecSeq = 3;
+
+    message NAME {
+      string type = 1;
+      string description = 2;
+    }
+
+    NAME name = 4;
+
+    message RELATIONSHIPTYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    RELATIONSHIPTYPE relationshipType = 5;
+
+    message VALIDFOR {
+      TIMEPERIOD timePeriod = 1;
+      string description = 2;
+    }
+
+    VALIDFOR validFor = 6;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType = 7;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 8;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 9;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+// Message definition of PRODUCTSPECCHARACTERISTIC
+message PRODUCTSPECIFICATIONCHARACTERISTICS 
+{
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message CONFIGURABLE {
+      string type = 1;
+      string description = 2;
+    }
+
+    CONFIGURABLE configurable = 1;
+
+    message DESCRIPTION {
+      string type = 1;
+      string description = 2;
+    }
+
+    DESCRIPTION description = 2;
+
+    message EXTENSIBLE {
+      string type = 1;
+      string description = 2;
+    }
+
+    EXTENSIBLE extensible = 3;
+
+    message ISUNIQUE {
+      string type = 1;
+      string description = 2;
+    }
+
+    ISUNIQUE isUnique = 4;
+
+    message MAXCARDINALITY {
+      string type = 1;
+      string description = 2;
+    }
+
+    MAXCARDINALITY maxCardinality = 5;
+
+    message MINCARDINALITY {
+      string type = 1;
+      string description = 2;
+    }
+
+    MINCARDINALITY minCardinality = 6;
+
+    message NAME {
+      string type = 1;
+      string description = 2;
+    }
+
+    NAME name = 7;
+
+    message REGEX {
+      string type = 1;
+      string description = 2;
+    }
+
+    REGEX regex = 8;
+
+    message VALUETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    VALUETYPE valueType = 9;
+
+    message PRODUCTSPECCHARRELATIONSHIP {
+      string type = 1;
+      PRODUCTSPECIFICATIONCHARACTERISTICRELATIONSHIPS productSpecificationCharacteristicRelationships = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARRELATIONSHIP productSpecCharRelationship =10;
+
+    message PRODUCTSPECCHARACTERISTICVALUE {
+      string type = 1;
+      PRODUCTSPECIFICATIONCHARACTERISTICVALUE productSpecificationCharacteristicValue = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARACTERISTICVALUE productSpecCharacteristicValue = 11;
+
+    message VALIDFOR {
+      TIMEPERIOD timePeriod = 1;
+      string description = 2;
+    }
+
+    VALIDFOR validFor = 12;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType = 13;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 14;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 15;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+// The response message for listProductSpecification
+message ListProductSpecificationResponse
+{
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message ID {
+      string type = 1;
+      string description = 2;
+    }
+
+    ID id = 1;
+
+    message HREF {
+      string type = 1;
+      string description = 2;
+    }
+
+    HREF href = 2;
+
+    message BRAND {
+      string type = 1;
+      string description = 2;
+    }
+
+    BRAND brand = 3;
+
+    message DESCRIPTION {
+      string type = 1;
+      string description = 2;
+    }
+
+    DESCRIPTION description = 4;
+
+    message ISBUNDLE {
+      string type = 1;
+      string description = 2;
+    }
+
+    ISBUNDLE isBundle = 5;
+
+    message LASTUPDATE {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    LASTUPDATE lastUpdate = 6;
+
+    message LIFECYCLESTATUS {
+      string type = 1;
+      string description = 2;
+    }
+
+    LIFECYCLESTATUS lifecycleStatus = 7;
+
+    message NAME {
+      string type = 1;
+      string description = 2;
+    }
+
+    NAME name = 8;
+
+    message PRODUCTNUMBER {
+      string type = 1;
+      string description = 2;
+    }
+
+    PRODUCTNUMBER productNumber = 9;
+
+    message VERSION {
+      string type = 1;
+      string description = 2;
+    }
+
+    VERSION version =10;
+
+    message PRODUCTSPECCHARACTERISTIC {
+      string type = 1;
+      PRODUCTSPECIFICATIONCHARACTERISTICS productSpecificationCharacteristic = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARACTERISTIC productSpecCharacteristic = 11;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType = 12;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 13;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 14;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+
+// The request message for retrieve Product Specification
+message retrieveProductSpecificationRequest
+{
+    string id = 1;
+}
+
+// The Response message for retrieve Product Specification
+message retrieveProductSpecificationResponse 
+{
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message ID {
+      string type = 1;
+      string description = 2;
+    }
+
+    ID id = 1;
+
+    message HREF {
+      string type = 1;
+      string description = 2;
+    }
+
+    HREF href = 2;
+
+    message BRAND {
+      string type = 1;
+      string description = 2;
+    }
+
+    BRAND brand = 3;
+
+    message DESCRIPTION {
+      string type = 1;
+      string description = 2;
+    }
+
+    DESCRIPTION description = 4;
+
+    message ISBUNDLE {
+      string type = 1;
+      string description = 2;
+    }
+
+    ISBUNDLE isBundle = 5;
+
+    message LASTUPDATE {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    LASTUPDATE lastUpdate = 6;
+
+    message LIFECYCLESTATUS {
+      string type = 1;
+      string description = 2;
+    }
+
+    LIFECYCLESTATUS lifecycleStatus = 7;
+
+    message NAME {
+      string type = 1;
+      string description = 2;
+    }
+
+    NAME name = 8;
+
+    message PRODUCTNUMBER {
+      string type = 1;
+      string description = 2;
+    }
+
+    PRODUCTNUMBER productNumber = 9;
+
+    message VERSION {
+      string type = 1;
+      string description = 2;
+    }
+
+    VERSION version =10;
+
+    message PRODUCTSPECCHARACTERISTIC {
+      string type = 1;
+	  PRODUCTSPECIFICATIONCHARACTERISTICS productSpecificationCharacteristic = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARACTERISTIC productSpecCharacteristic = 11;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType = 12;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 13;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 14;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+// The request message to create new Product Specification
+message CreateProductSpecificationRequest
+{
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message BRAND {
+      string type = 1;
+      string description = 2;
+    }
+
+    BRAND brand = 1;
+
+    message DESCRIPTION {
+      string type = 1;
+      string description = 2;
+    }
+
+    DESCRIPTION description = 2;
+
+    message ISBUNDLE {
+      string type = 1;
+      string description = 2;
+    }
+
+    ISBUNDLE isBundle = 3;
+
+    message LASTUPDATE {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    LASTUPDATE lastUpdate = 4;
+
+    message LIFECYCLESTATUS {
+      string type = 1;
+      string description = 2;
+    }
+
+    LIFECYCLESTATUS lifecycleStatus = 5;
+
+    message NAME {
+      string type = 1;
+      string description = 2;
+    }
+
+    NAME name = 6;
+
+    message PRODUCTNUMBER {
+      string type = 1;
+      string description = 2;
+    }
+
+    PRODUCTNUMBER productNumber = 7;
+
+    message VERSION {
+      string type = 1;
+      string description = 2;
+    }
+
+    VERSION version = 8;
+
+    message PRODUCTSPECCHARACTERISTIC {
+      string type = 1;
+	  PRODUCTSPECIFICATIONCHARACTERISTICS productSpecificationCharacteristic = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARACTERISTIC productSpecCharacteristic = 9;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType =10;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 11;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 12;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+
+
+// The response message for Create Product Specification is as same as response message for retrieve product Specification
+
+// The request message for update product Specification
+message UpdateProductSpecificationRequest
+{
+  string type = 1;
+  string description = 2;
+
+  message PROPERTIES {
+
+    message PRODUCTSPECCHARACTERISTIC {
+      string type = 1;
+	  PRODUCTSPECIFICATIONCHARACTERISTICS productSpecificationCharacteristic = 2;
+      string description = 3;
+    }
+
+    PRODUCTSPECCHARACTERISTIC productSpecCharacteristic = 1;
+
+    message BASETYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    BASETYPE baseType = 2;
+
+    message SCHEMALOCATION {
+      string type = 1;
+      string format = 2;
+      string description = 3;
+    }
+
+    SCHEMALOCATION schemaLocation = 3;
+
+    message TYPE {
+      string type = 1;
+      string description = 2;
+    }
+
+    TYPE type = 4;
+  }
+
+  PROPERTIES properties = 3;
+}
+
+
+// The response message for update Product Specification is as same as response message for retrieve product Specification
+
+// The request message for Delete Product Specification
+message DeleteProductSpecificationRequest
+{
+	string id = 1;
+}
+
+// The response message for delete Product Specification
+message DeleteProductSpecificationResponse
+{
+}
+
+// The ProductSpecification service definition.
+service ProductSpecification {
+
+    // Returns all productSpecifications
+    rpc getAllProductSpecifications (ListProductSpecificationRequest) returns (ListProductSpecificationResponse) { }
+	
+	// Returns requested productSpecifications
+    rpc getProductSpecification (retrieveProductSpecificationRequest) returns (retrieveProductSpecificationResponse) { }
+	
+	// Creates new product Specifications
+    rpc createProductSpecification (CreateProductSpecificationRequest) returns (retrieveProductSpecificationResponse) { }
+	
+	// Updates product Specifications
+    rpc updateProductSpecification (UpdateProductSpecificationRequest) returns (retrieveProductSpecificationResponse) { }
+    
+    //Deletes requested product Specification
+    rpc deleteProductSpecification (DeleteProductSpecificationRequest) returns (DeleteProductSpecificationResponse) { }
+    
+}
